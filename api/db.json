@@ -1,0 +1,166 @@
+{
+  "listings": [
+    {
+      "company_id": "0",
+      "initial_price": 100,
+      "current_price": "400",
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "IINMI 1",
+      "tag": "popular",
+      "id": "1"
+    },
+    {
+      "company_id": "0",
+      "initial_price": 100,
+      "current_price": 300,
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "IINMI 2",
+      "tag": "popular",
+      "id": "2"
+    },
+    {
+      "company_id": "0",
+      "initial_price": 100,
+      "current_price": 300,
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "IINMI 3",
+      "tag": "popular",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "company_id": "1",
+      "initial_price": 100,
+      "current_price": 300,
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "IBM 1",
+      "tag": "staff"
+    },
+    {
+      "id": "5",
+      "company_id": "1",
+      "initial_price": 100,
+      "current_price": 300,
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "IBM 2",
+      "tag": "staff"
+    },
+    {
+      "id": "6",
+      "company_id": "1",
+      "initial_price": 100,
+      "current_price": 300,
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "IBM 3",
+      "tag": "staff"
+    },
+    {
+      "id": "7",
+      "company_id": "2",
+      "initial_price": 100,
+      "current_price": 300,
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "Google 1",
+      "tag": "new"
+    },
+    {
+      "id": "8",
+      "company_id": "2",
+      "initial_price": 100,
+      "current_price": 300,
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "Google 2",
+      "tag": "new"
+    },
+    {
+      "id": "9",
+      "company_id": "2",
+      "initial_price": 100,
+      "current_price": 300,
+      "user_id": 0,
+      "equity": 15,
+      "creation_date": "3-22-21",
+      "duration": 3,
+      "description": "Google 3",
+      "tag": "new"
+    },
+    {
+      "description": "FB 1",
+      "tag": "Test",
+      "company_id": "-pqpaOe",
+      "userId": "112219237037472281140",
+      "id": "k7WmS0L"
+    }
+  ],
+  "companies": [
+    {
+      "id": "0",
+      "company_name": "IINMI",
+      "owner_user_id": 1,
+      "members": [
+        {
+          "number": 1
+        }
+      ],
+      "company_logo": "IINMI"
+    },
+    {
+      "id": "1",
+      "company_name": "IBM",
+      "owner_user_id": 1,
+      "members": [
+        {
+          "number": 1
+        }
+      ],
+      "company_logo": "IBM"
+    },
+    {
+      "id": "2",
+      "company_name": "Google",
+      "owner_user_id": 1,
+      "members": [
+        {
+          "number": 1
+        }
+      ],
+      "company_logo": "Google"
+    },
+    {
+      "company_name": "Facebook",
+      "company_logo": "FB",
+      "userId": "112219237037472281140",
+      "id": "-pqpaOe"
+    },
+    {
+      "company_name": "Imgur",
+      "company_logo": "IMG",
+      "userId": "112219237037472281140",
+      "id": "kYSLayB"
+    }
+  ]
+}
