@@ -9,8 +9,24 @@ class ListingShow extends React.Component {
     this.props.fetchListing(this.props.match.params.id);
   }
 
+  renderError() {
+    return (
+      <div className="ui error message">
+        <div className="header">Value must be higher than previous bid</div>
+      </div>
+    );
+  }
+
   onSubmit = formValues => {
-    this.props.editListing(this.props.match.params.id, formValues);
+    if(parseInt(formValues.current_price) > parseInt(this.props.listing.current_price))
+    {
+      this.props.editListing(this.props.match.params.id, formValues);
+    }
+    else
+    {
+      this.renderError()
+    }
+
   };
 
   renderDetails() {
@@ -42,17 +58,28 @@ class ListingShow extends React.Component {
     )
   }
 
-  render() {
+  renderBid() {
+    if(!this.props.listing)
+    {
+      return <div>Loading bid...</div> 
+    }
     return (
-      <div>
+      <ListingBidForm price={this.props.listing.current_price} onSubmit={this.onSubmit} />
+    )
+  }
+
+  render() {
+      return (
         <div>
-          {this.renderDetails()}
+          <div>
+            {this.renderDetails()}
+          </div>
+          <div>
+            {this.renderBid()}
+          </div>
         </div>
-        <div>
-          <ListingBidForm onSubmit={this.onSubmit} />
-        </div>
-      </div>
-    );
+      );
+
   }
 }
 

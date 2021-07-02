@@ -41,8 +41,6 @@ class CompanyShow extends React.Component {
 
   renderList() {
     return this.props.listings.map(listing => {
-      console.log(listing.company_id);
-      console.log(this.props.match.params.id);
       if(listing.company_id === this.props.match.params.id)
       return (
         <div className="item" key={listing.id}>

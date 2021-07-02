@@ -3,11 +3,22 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Modal from '../Modal';
 import history from '../../history';
-import { fetchCompany, deleteCompany } from '../../actions';
+import { fetchCompany, deleteCompany, fetchListings, deleteListing } from '../../actions';
 
 class CompanyDelete extends React.Component {
   componentDidMount() {
     this.props.fetchCompany(this.props.match.params.id);
+    this.props.fetchListings();
+  }
+
+  deleteAssociatedListings(company_id) {
+    this.props.listings.map(listing => {
+      if(listing.company_id === company_id)
+      {
+        this.props.deleteListing(listing.id)
+      }
+    })
+    this.props.deleteCompany(company_id)
   }
 
   renderActions() {
@@ -16,7 +27,7 @@ class CompanyDelete extends React.Component {
     return (
       <React.Fragment>
         <button
-          onClick={() => this.props.deleteCompany(id)}
+          onClick={() => this.deleteAssociatedListings(id)}
           className="ui button negative"
         >
           Delete
@@ -51,10 +62,12 @@ class CompanyDelete extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return { companies: state.companies[ownProps.match.params.id] };
+  return { companies: state.companies[ownProps.match.params.id],
+           listings: Object.values(state.listings)
+         };
 };
 
 export default connect(
   mapStateToProps,
-  { fetchCompany, deleteCompany }
+  { fetchCompany, deleteCompany, fetchListings, deleteListing }
 )(CompanyDelete);

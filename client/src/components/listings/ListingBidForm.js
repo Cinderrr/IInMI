@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, formValues, reduxForm } from 'redux-form';
 
 class ListingBidForm extends React.Component {
   renderError({ error, touched }) {
